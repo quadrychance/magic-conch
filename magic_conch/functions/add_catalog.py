@@ -8,7 +8,10 @@ import pylab
 import seaborn as sns
 #import dask
 from tqdm import tqdm
-nova_EB = pd.read_csv('~/binary_planet_host_project/data/QVFlk0YH')
+
+from magic_conch import get_data_filename
+
+nova_EB = pd.read_csv(get_data_filename('QVFlk0YH'))
 EB_KIC = pd.DataFrame(nova_EB[['KIC','period']])
 
 def addEBCatalog(data):
